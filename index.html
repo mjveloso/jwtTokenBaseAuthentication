@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+
+	<div class="page-wrapper">
+		
+		<div class="login-wrapper" ng-controller="AuthController as auth">
+			
+			<form ng-submit="login()" role="form">
+				
+				<div class="row">
+					
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label for="inputUsername">Username</label>
+							<input id="inputUsername" class="form-control" type="text" ng-model="userData.username" />
+						</div>
+					</div>
+
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label for="inputPassword">Password</label>
+							<input id="inputPassword" class="form-control" type="password" ng-model="userData.password" />
+						</div>
+					</div>
+
+					<div class="col-lg-12">
+						<button style="width: 100%;" id="buttonSubmit" class="btn" type="submit" >Login</button>
+					</div>
+
+				</div> <!-- <div class="row"> -->
+
+			</form>
+
+		</div> <!-- <div class="login-wrapper"> -->
+
+	</div> <!-- <div class="page-wrapper"> -->
+
+	<script type="text/javascript" src="js/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+
+	<!-- main-app -->
+	<script type="text/javascript" src="app/app.js"></script>
+
+	<!-- controllers -->
+	<script type="text/javascript" src="app/controllers/student-ctrl.js"></script>
+	<script type="text/javascript" src="app/controllers/auth-ctrl.js"></script>
+
+	<!-- services -->
+	<script type="text/javascript" src="app/services/student-service.js"></script>
+	<script type="text/javascript" src="app/services/auth-service.js"></script>
+
+	<script>
+		
+		$(document).ready(function() {
+
+			var myArray = [];
+
+			function test() {
+				return _.contains("admin", myArray);
+			}
+
+			test();
+
+
+		});
+
+
+	</script>
+
+</body>
+</html>
